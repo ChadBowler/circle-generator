@@ -5,48 +5,6 @@ canvas.height = window.innerHeight;
 
 let c = canvas.getContext('2d');
 
-/* c.fillStyle = 'rgba(255, 0, 0, 0.5)';
-c.fillRect(100, 100, 100, 100);
-c.fillStyle = 'rgba(0, 0, 255, 0.5)';
-c.fillRect(400, 100, 100, 100);
-c.fillStyle = 'rgba(0, 255, 0, 0.5)';
-c.fillRect(300, 300, 100, 100);
-console.log(canvas); */
-
-// Line
-/* c.beginPath();
-c.moveTo(50, 300);
-c.lineTo(300, 100);
-c.lineTo(400, 300);
-c.strokeStyle = "#fa34a3";
-c.stroke(); */
-
-// Arc  /Circle
-/* c.beginPath();
-c.arc(300, 300, 30, 0, Math.PI * 2, false);
-c.strokeStyle = 'blue';
-c.stroke(); */
-
-/* const setBg = () => {
-    const randomColor = Math.floor(Math.random()*16777215).toString(16);
-    document.body.style.backgroundColor = "#" + randomColor; 
-    color.innerHTML = "#" + randomColor;
-  } */
-
-/* for (let i = 0; i < 100; i++) {
-    const randomColor = Math.floor(Math.random()*16777215).toString(16);
-    let x = Math.random() * window.innerWidth;
-    let y = Math.random() * window.innerHeight;
-    c.beginPath();
-    c.arc(x, y, 30, 0, Math.PI * 2, false);
-    c.strokeStyle = "#" + randomColor;
-    c.lineWidth = 5;
-    c.stroke();
-
-} */
-
-
-
 
 let mouse = {
 
@@ -56,6 +14,7 @@ let mouse = {
 
 let maxRadius = 40;
 let minRadius = 2;
+
 let pinkArray = [
     '#F595E1',
     '#E157E6',
@@ -115,13 +74,9 @@ let arrays = [
 ]
 
 function chooseArray(arrays) {
-    // Get the length of the arrays array.
+    
     const length = arrays.length;
-  
-    // Generate a random number between 0 and length - 1.
     const randomIndex = Math.floor(Math.random() * length);
-  
-    // Return the array at the random index.
     return arrays[randomIndex];
   }
 
@@ -215,8 +170,6 @@ function init() {
 
 }
 
-//console.log(circleArray);
-
 
 function animate() {
     requestAnimationFrame(animate);
@@ -228,22 +181,6 @@ function animate() {
     }
 
    
-/* 
-    c.beginPath();
-    c.arc(x, y, 30, 0, Math.PI * 2, false);
-    c.strokeStyle = 'blue';
-    c.stroke();
-
-    if (x + radius > innerWidth || x - radius < 0 ) {
-        dx = -dx;
-    }
-
-    if (y + radius > innerHeight || y - radius <0){
-
-        dy = -dy;
-    }
-    x += dx;
-    y += dy; */
 }
 
 init();
